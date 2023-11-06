@@ -15,4 +15,10 @@ abstract class Styles{
     fontFamily:  'Inter',
     fontWeight: FontWeight.w500,
   );
+  static TextStyle style22 = const  TextStyle(
+    color: Colors.black,
+    fontSize: 22,
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w500,
+  );
 }
