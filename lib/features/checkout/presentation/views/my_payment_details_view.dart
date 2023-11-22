@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:payment/core/utils/styles.dart';
-
 import 'package:payment/core/utils/widgets/custom_button.dart';
-import 'package:payment/features/checkout/presentation/widgets/my_item_method_payment.dart';
+import 'package:payment/features/checkout/presentation/widgets/CustomCreditCardWidget.dart';
 import 'package:payment/features/checkout/presentation/widgets/my_items_payment.dart';
+import 'package:payment/features/checkout/presentation/widgets/my_payment_details_body.dart';
 
 class MyPaymentDetailsView extends StatelessWidget {
   const MyPaymentDetailsView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         leading: Center(
@@ -26,11 +27,7 @@ class MyPaymentDetailsView extends StatelessWidget {
           style: Styles.style25,
         ),
       ),
-      body: Column(
-        children: [
-          MyItemsPayment()
-        ],
-      ),
+      body:  const MyPaymentDetailsBody()
     );
   }
 }
