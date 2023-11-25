@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:payment/core/utils/styles.dart';
 import 'package:payment/core/utils/widgets/custom_button.dart';
-import 'package:payment/features/checkout/presentation/widgets/my_payment_details_body.dart';
+import 'package:payment/features/checkout/presentation/widgets/thank_you_body.dart';
 
-class MyPaymentDetailsView extends StatelessWidget {
-  const MyPaymentDetailsView({Key? key}) : super(key: key);
+class ThankYouView extends StatelessWidget {
+  const ThankYouView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         leading: Center(
           child: CustomButton(
             title: "",
@@ -20,11 +21,11 @@ class MyPaymentDetailsView extends StatelessWidget {
         ),
         centerTitle: true,
         title: Text(
-          "My payment Details",
+          "",
           style: Styles.style25,
         ),
       ),
-      body:  const MyPaymentDetailsBody()
+      body: const ThankYouBody(),
     );
   }
 }

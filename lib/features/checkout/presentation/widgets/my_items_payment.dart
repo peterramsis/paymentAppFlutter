@@ -18,7 +18,7 @@ class MyItemsPayment extends StatelessWidget {
           children: [
             MyItemPaymentMethod(
               svg: "assets/images/SVGRepo_iconCarrier.svg",
-              function: ()=>print("click"),
+              function: ()=>{},
             ),
             const SizedBox(width: 10),
             MyItemPaymentMethod(

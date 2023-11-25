@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:payment/core/utils/widgets/custom_button.dart';
+import 'package:payment/features/checkout/presentation/views/thank_you_view.dart';
 import 'package:payment/features/checkout/presentation/widgets/CustomCreditCardWidget.dart';
 import 'package:payment/features/checkout/presentation/widgets/my_items_payment.dart';
 
@@ -33,7 +34,9 @@ class _MyPaymentDetailsBodyState extends State<MyPaymentDetailsBody> {
               ),
               child: CustomButton(
                 title: "Complete Payment",
-                myFunction: (){},
+                myFunction: (){
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ThankYouView()));
+                },
               ),
             ),
           )
