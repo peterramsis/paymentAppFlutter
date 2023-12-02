@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:payment/core/utils/styles.dart';
+
 class MasterCardWidget extends StatelessWidget {
   const MasterCardWidget({Key? key}) : super(key: key);
 
@@ -16,11 +17,8 @@ class MasterCardWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
           ),
         ),
-        child:  Padding(
-          padding: const EdgeInsets.symmetric(
-              horizontal: 30,
-              vertical: 10
-          ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
           child: Row(
             children: [
               SvgPicture.asset("assets/images/logo.svg"),
@@ -32,7 +30,7 @@ class MasterCardWidget extends StatelessWidget {
                 child: Column(
                   children: [
                     Text("Credit Card", style: Styles.style18400W),
-                    Text("Mastercard **78",style: Styles.style18400W),
+                    Text("Mastercard **78", style: Styles.style18400W),
                   ],
                 ),
               ),

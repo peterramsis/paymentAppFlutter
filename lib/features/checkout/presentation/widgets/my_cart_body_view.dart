@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:payment/core/utils/widgets/custom_button.dart';
-import 'package:payment/features/checkout/presentation/views/my_payment_details_view.dart';
 import 'package:payment/features/checkout/presentation/widgets/my_cart_info.dart';
 import 'package:payment/features/checkout/presentation/widgets/my_items_payment.dart';
 
@@ -36,12 +35,15 @@ class MyCartBodyView extends StatelessWidget {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             const MyItemsPayment(),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
-                              child: CustomButton(title: "Complete Payment" ,myFunction: ()=>{},),
+                              child: CustomButton(
+                                title: "Complete Payment",
+                                myFunction: () => {},
+                              ),
                             )
                           ],
                         ),

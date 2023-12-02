@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:payment/core/utils/styles.dart';
 import 'package:payment/core/utils/widgets/dash_line.dart';
 import 'package:payment/features/checkout/presentation/widgets/card_mastercard_widget.dart';
@@ -139,11 +138,9 @@ class ThankYouBody extends StatelessWidget {
             const Positioned(
                 right: 0, left: 0, top: 300, child: MasterCardWidget()),
             Positioned(
-                bottom: (MediaQuery.of(context).size.height * .2 +20) /2 - 42 ,
+                bottom: (MediaQuery.of(context).size.height * .2 + 20) / 2 - 42,
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 10
-                  ),
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: SizedBox(
                     width: MediaQuery.of(context).size.width - 75,
                     child: Row(

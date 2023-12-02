@@ -8,6 +8,6 @@ class Assets {
   static const String imagesLogo = 'assets/images/logo.svg';
   static const String imagesPay = 'assets/images/pay.svg';
   static const String imagesPaypal = 'assets/images/paypal.svg';
-  static const String imagesSVGRepoIconCarrier = 'assets/images/SVGRepo_iconCarrier.svg';
-
+  static const String imagesSVGRepoIconCarrier =
+      'assets/images/SVGRepo_iconCarrier.svg';
 }

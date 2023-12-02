@@ -14,33 +14,30 @@ class MyPaymentDetailsBody extends StatefulWidget {
 class _MyPaymentDetailsBodyState extends State<MyPaymentDetailsBody> {
   @override
   Widget build(BuildContext context) {
-    return  CustomScrollView(
+    return CustomScrollView(
       controller: ScrollController(),
-      slivers:   [
+      slivers: [
         const SliverToBoxAdapter(
-          child:MyItemsPayment(),
+          child: MyItemsPayment(),
         ),
         const SliverToBoxAdapter(
-          child:CustomCreditCard(),
+          child: CustomCreditCard(),
         ),
         SliverFillRemaining(
-          hasScrollBody: false,
-          child: Align(
-            alignment: Alignment.bottomCenter,
-            child: Padding(
-              padding: const EdgeInsets.only(
-                bottom: 10,
-                left: 12,right: 12
+            hasScrollBody: false,
+            child: Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 10, left: 12, right: 12),
+                child: CustomButton(
+                  title: "Complete Payment",
+                  myFunction: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => const ThankYouView()));
+                  },
+                ),
               ),
-              child: CustomButton(
-                title: "Complete Payment",
-                myFunction: (){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ThankYouView()));
-                },
-              ),
-            ),
-          )
-        )
+            ))
       ],
     );
   }

@@ -10,21 +10,20 @@ class MyPaymentDetailsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: Center(
-          child: CustomButton(
-            title: "",
-            svg: "assets/images/Arrow1.svg",
-            myFunction: () => Navigator.of(context).pop(),
+        appBar: AppBar(
+          leading: Center(
+            child: CustomButton(
+              title: "",
+              svg: "assets/images/Arrow1.svg",
+              myFunction: () => Navigator.of(context).pop(),
+            ),
+          ),
+          centerTitle: true,
+          title: Text(
+            "My payment Details",
+            style: Styles.style25,
           ),
         ),
-        centerTitle: true,
-        title: Text(
-          "My payment Details",
-          style: Styles.style25,
-        ),
-      ),
-      body:  const MyPaymentDetailsBody()
-    );
+        body: const MyPaymentDetailsBody());
   }
 }

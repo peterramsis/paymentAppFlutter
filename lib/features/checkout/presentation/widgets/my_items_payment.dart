@@ -7,7 +7,6 @@ class MyItemsPayment extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Padding(
       padding: const EdgeInsets.all(6.0),
       child: SizedBox(
@@ -18,23 +17,21 @@ class MyItemsPayment extends StatelessWidget {
           children: [
             MyItemPaymentMethod(
               svg: "assets/images/SVGRepo_iconCarrier.svg",
-              function: ()=>{},
+              function: () => {},
             ),
             const SizedBox(width: 10),
             MyItemPaymentMethod(
               svg: "assets/images/paypal.svg",
-              function: ()=>print("click"),
+              function: () => print("click"),
             ),
             const SizedBox(width: 10),
             MyItemPaymentMethod(
               svg: "assets/images/pay.svg",
-              function: ()=>print("pay"),
+              function: () => print("pay"),
             ),
-
           ],
         ),
       ),
     );
   }
-
 }
