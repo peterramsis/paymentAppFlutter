@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:payment/core/utils/widgets/custom_button.dart';
+import 'package:payment/features/checkout/data/repo/check_out_import_repo.dart';
+import 'package:payment/features/checkout/presentation/manager/payment_cubit.dart';
 import 'package:payment/features/checkout/presentation/widgets/my_cart_info.dart';
-import 'package:payment/features/checkout/presentation/widgets/my_items_payment.dart';
+import 'package:payment/features/checkout/presentation/widgets/payment_methods_sheet.dart';
 
 class MyCartBodyView extends StatelessWidget {
   const MyCartBodyView({Key? key}) : super(key: key);
@@ -29,24 +32,9 @@ class MyCartBodyView extends StatelessWidget {
               //Navigator.of(context).push(MaterialPageRoute(builder: (context) => const MyPaymentDetailsView()))
               showModalBottomSheet(
                   context: context,
-                  builder: (context) => Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 30),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            const MyItemsPayment(),
-                            const SizedBox(
-                              height: 10,
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: CustomButton(
-                                title: "Complete Payment",
-                                myFunction: () => {},
-                              ),
-                            )
-                          ],
-                        ),
+                  builder: (context) => BlocProvider(
+                        create: (context) => PaymentCubit(CheckOutImportRepo()),
+                        child: const PaymentMethodsSheet(),
                       ));
             },
           ),
