@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_credit_card/flutter_credit_card.dart';
+// import 'package:flutter_credit_card/flutter_credit_card.dart';
 
 class CustomCreditCard extends StatefulWidget {
   const CustomCreditCard({Key? key}) : super(key: key);
@@ -21,29 +21,29 @@ class _CustomCreditCardState extends State<CustomCreditCard> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CreditCardWidget(
-          cardNumber: cardNumber,
-          expiryDate: expiryDate,
-          cardHolderName: cardHolderName,
-          cvvCode: cvvCode,
-          showBackView: showBackView,
-          isHolderNameVisible: true,
-          onCreditCardWidgetChange: (CreditCardBrand) {},
-        ),
-        CreditCardForm(
-            cardNumber: cardNumber,
-            expiryDate: expiryDate,
-            cardHolderName: cardHolderName,
-            cvvCode: cvvCode,
-            onCreditCardModelChange: (credit) {
-              cardNumber = credit.cardNumber;
-              cvvCode = credit.cvvCode;
-              expiryDate = credit.expiryDate;
-              cardHolderName = credit.cardHolderName;
-              showBackView = credit.isCvvFocused;
-              setState(() {});
-            },
-            formKey: formKey),
+        // CreditCardWidget(
+        //   cardNumber: cardNumber,
+        //   expiryDate: expiryDate,
+        //   cardHolderName: cardHolderName,
+        //   cvvCode: cvvCode,
+        //   showBackView: showBackView,
+        //   isHolderNameVisible: true,
+        //   onCreditCardWidgetChange: (CreditCardBrand) {},
+        // ),
+        // CreditCardForm(
+        //     cardNumber: cardNumber,
+        //     expiryDate: expiryDate,
+        //     cardHolderName: cardHolderName,
+        //     cvvCode: cvvCode,
+        //     onCreditCardModelChange: (credit) {
+        //       cardNumber = credit.cardNumber;
+        //       cvvCode = credit.cvvCode;
+        //       expiryDate = credit.expiryDate;
+        //       cardHolderName = credit.cardHolderName;
+        //       showBackView = credit.isCvvFocused;
+        //       setState(() {});
+        //     },
+        //     formKey: formKey),
       ],
     );
   }
